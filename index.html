@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Everyone Live Scan & Notary | Carson, CA</title>
+<title>Everyone Live Scan & Notary | Apostille Services in Carson, CA</title>
 <meta name="description" content="Apostille, Live Scan fingerprinting and notary services in Carson, CA.">
 <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPNer9dJgO5J3IfUwJcbn5SY-MgcOQE9AgY7oqwGZ4nd3JSopG_raK7nb3c6maA8pP7Ger43bKIVjBKa3w3I1Q1FULctqgBxHqTZeHsG-5Ou6N74ROMmCG9U-RRS2xolC5dxVFKsx1048JvZmuqaXm-YoCDUPIBJj4CjLv4rP-_LCMOVphm4B-1JvkuRrM/s863/Everyone%20Logo-04.webp">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -214,7 +214,6 @@ nav ul.open{max-height:85vh;overflow:auto;padding-block:14px}
       <li><a class="l" href="#about">About Us</a></li>
       <li class="dd"><a class="l" href="#services">Services ▾</a>
         <div class="menu" id="ddmenu"></div></li>
-      <li><a class="l" href="#areas">Service Areas</a></li>
       <li><a class="l" href="#gallery">Gallery</a></li>
       <li><a class="l" href="#contact">Contact Us</a></li>
     </ul></nav>
@@ -232,7 +231,7 @@ nav ul.open{max-height:85vh;overflow:auto;padding-block:14px}
         <span class="tag">Carson, California</span>
         <h1>Trusted <span>Apostille</span>, Notary &amp; Live Scan Services</h1>
         <p>Get your documents authenticated for use abroad, notarized or fingerprinted. Professional, accurate and convenient service for individuals, families and businesses across Carson and the South Bay.</p>
-        <a href="#services" class="btn">Explore Services</a> &nbsp; <a href="tel:+14243754645" class="btn o">Call (424) 375-4645</a>
+        <a href="https://everyonelivescannotary.com/" class="btn">Explore Website</a> &nbsp; <a href="tel:+14243754645" class="btn o">Call (424) 375-4645</a>
       </div>
       <div class="hw">
         <div class="scene">
@@ -348,16 +347,6 @@ nav ul.open{max-height:85vh;overflow:auto;padding-block:14px}
 <!-- SERVICE DETAIL (rendered by JS) -->
 <div class="page" id="p-service"></div>
 
-<!-- AREAS -->
-<div class="page" id="p-areas">
-  <div class="ph-hero"><div class="wrap"><span class="tag">Service Areas</span><h1>Areas We Serve</h1><div class="crumb"><a href="#home">Home</a> / Service Areas</div></div></div>
-  <section><div class="wrap c">
-    <p class="sub">Based in Carson, we proudly serve clients throughout the South Bay and Greater Los Angeles, with mobile Live Scan available by appointment.</p><br>
-    <div id="areaPills"></div>
-    <div class="map" data-map></div>
-  </div></section>
-</div>
-
 <!-- GALLERY -->
 <div class="page" id="p-gallery">
   <div class="ph-hero"><div class="wrap"><span class="tag">Gallery</span><h1>Our Gallery</h1><div class="crumb"><a href="#home">Home</a> / Gallery</div></div></div>
@@ -430,7 +419,6 @@ const S=[
  need:["Completed Live Scan form (BCIA 8016) from your agency","Valid government-issued photo ID","Applicable fees"],
  steps:["Book your appointment","We arrive at your location","Fingerprints captured digitally","Results sent to the requesting agency"]}];
 const FAQ=[["Do I need an appointment?","Walk-ins are welcome during business hours, but appointments are recommended and required for mobile services."],["What ID is accepted for notarization?","A valid, unexpired government-issued photo ID such as a driver’s license, state ID or passport."],["What is an apostille?","An apostille is a certificate that authenticates a public document so it is recognized in countries that are members of the Hague Convention."],["What do I bring for Live Scan?","Your completed Live Scan request form from the requesting agency and a valid photo ID."],["Do you offer mobile service?","Yes. Mobile Live Scan and mobile notary are available by appointment throughout Carson and nearby areas."]];
-const AREAS=["Carson","Torrance","Long Beach","Compton","Gardena","Wilmington","Harbor City","Lomita","Lakewood","Inglewood","Hawthorne","San Pedro","Paramount","Bellflower","Los Angeles"];
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const fb=`onerror="this.style.display='none'"`;
 $("#yr").textContent=new Date().getFullYear();
@@ -439,7 +427,6 @@ const card=s=>`<div class="card rv"><div class="ph"><img src="${s.img}" alt="${s
 $("#homeServices").innerHTML=S.map(card).join("");
 $("#allServices").innerHTML=S.map(card).join("");
 $("#faqs").innerHTML=FAQ.map(f=>`<div class="fq"><button>${f[0]}</button><div>${f[1]}</div></div>`).join("");
-$("#areaPills").innerHTML=AREAS.map(a=>`<span class="pill">📍 ${a}, CA</span>`).join("");
 $("#galBox").innerHTML=[[IMG.notary,"Notary Service"],[IMG.scan,"Mobile Live Scan"],[IMG.apostille,"Apostille Services"],[IMG.scan,"Fingerprinting"],[IMG.notary,"Document Notarization"],[IMG.apostille,"Document Authentication"]].map(g=>`<figure class="rv"><img src="${g[0]}" alt="${g[1]}" loading="lazy" ${fb}><figcaption>${g[1]}</figcaption></figure>`).join("");
 $$("[data-map]").forEach(m=>m.innerHTML=MAP);
 document.addEventListener("click",e=>{const b=e.target.closest(".fq button");if(b)b.parentElement.classList.toggle("open")});
